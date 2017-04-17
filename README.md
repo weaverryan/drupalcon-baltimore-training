@@ -96,6 +96,15 @@ php vendor/bin/drush site-install --db-url=mysql://root@localhost/d8_baltimore
 
 (update the connection details based on your system!)
 
+## 6) Turn error display on
+
+If we make any mistakes, we'll want to see them! To do that, in
+the web interface:
+
+A) Login with your admin user
+B) Go to Manage -> Configuration -> Logging and errors
+C) Choose "All messages, with backtrace information" and click "Save Configuration"
+
 That's it! Make sure you can access and see your site! You're
 now all ready for the training! Come ready to do some coding :).
 
