@@ -34,7 +34,23 @@ From the command line, this is:
 git clone https://github.com/weaverryan/drupalcon-baltimore-training.git
 ```
 
-### 3) Point your Web Server at the site
+## 3) Install the Composer Dependencies
+
+In order to download Symfony and other "vendor" dependencies, run,
+move into the directory and run:
+
+```
+cd drupalcon-baltimore-training
+php composer.phar install
+```
+
+If you see any errors, read them carefully (or message me!).
+If, for example, you're missing a needed PHP extension, you
+might see a big error that includes details about this.
+
+We'll talk more about this step in the training :).
+
+## 4) Point your Web Server at the site
 
 You can use any web server for the training, but I highly recommend
 the built-in PHP web server because it requires zero setup. From
@@ -47,32 +63,38 @@ php -S localhost:8000
 That's it! You should be able to go to ``http://localhost:8000``
 to pull up your site! When you're finished, press `Ctrl+C` to
 terminate the built-in web server. We'll start it again when
-you get to the training.
+you get to the training. If you use this, you do *not* need to
+configure Apache or Nginx (but you can if you like that better).
 
 **NOTE** If you're using a virtual machine, no problem! Update the
 command to be `php -S 0.0.0.0:8000` and then use your VM's IP address
 in your browser to access it.
 
-## 4) Install the Drupal Site
+## 5) Install the Drupal Site
 
 Finally, make sure you've gone through the Drupal site install
 process. You can do this however you want, for example:
 
 A) You can go to `http://localhost:8000` and install via the web interface
 
-B) Use Drush (which is pre-installed inside this project). For example:
+B) Use **Drupal console**
+
+(if you've started the built-in web server on the previous step, you'll need
+to open a new terminal tab. Move into the site directory, then run:
+
+```
+php vendor/bin/drupal site:install
+```
+
+Use the "Standard" install option
+
+C) Or you can use **Drush** (which is pre-installed inside this project). For example:
 
 ```
 php vendor/bin/drush site-install --db-url=mysql://root@localhost/d8_baltimore
 ```
 
 (update the connection details based on your system!)
-
-C) Or you can use Drupal console
-
-```
-php vendor/bin/drupal site:install
-```
 
 That's it! Make sure you can access and see your site! You're
 now all ready for the training! Come ready to do some coding :).
