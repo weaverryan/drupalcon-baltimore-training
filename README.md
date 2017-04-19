@@ -83,7 +83,7 @@ B) Use **Drupal console**
 to open a new terminal tab. Move into the site directory, then run:
 
 ```
-php vendor/bin/drupal site:install
+./vendor/bin/drupal site:install
 ```
 
 Use the "Standard" install option
@@ -91,7 +91,7 @@ Use the "Standard" install option
 C) Or you can use **Drush** (which is pre-installed inside this project). For example:
 
 ```
-php vendor/bin/drush site-install --db-url=mysql://root@localhost/d8_baltimore
+./vendor/bin/drush site-install --db-url=mysql://root@localhost/d8_baltimore
 ```
 
 (update the connection details based on your system!)
