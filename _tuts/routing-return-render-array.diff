@@ -1,0 +1,25 @@
+diff --git a/modules/custom/old_bay/src/Controller/OldBayController.php b/modules/custom/old_bay/src/Controller/OldBayController.php
+index 56d2c22..5013496 100644
+--- a/modules/custom/old_bay/src/Controller/OldBayController.php
++++ b/modules/custom/old_bay/src/Controller/OldBayController.php
+@@ -2,13 +2,16 @@
+ 
+ namespace Drupal\old_bay\Controller;
+ 
+-use Symfony\Component\HttpFoundation\Response;
+-
+ class OldBayController {
+   public function seasonFood($count) {
+-    return new Response(sprintf(
++    $message = sprintf(
+       'Boom! We just bayified %s pieces of popcorn!',
+       $count
+-    ));
++    );
++
++    return [
++      '#type' => 'markup',
++      '#markup' => $message,
++    ];
+   }
+ }

@@ -1,0 +1,55 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "module-generate-it",
+            "name": "Module: generate it",
+            "description": null
+        },
+        {
+            "id": "routing-add-route-only",
+            "name": "Routing: Add route only",
+            "description": null
+        },
+        {
+            "id": "routing-add-controller-controller",
+            "name": "Routing: Add controller + _controller",
+            "description": null
+        },
+        {
+            "id": "routing-add-wildcard",
+            "name": "Routing: Add Wildcard",
+            "description": null
+        },
+        {
+            "id": "routing-give-wildcard-default",
+            "name": "Routing: Give wildcard default",
+            "description": null
+        },
+        {
+            "id": "routing-return-render-array",
+            "name": "Routing: Return render array",
+            "description": null
+        },
+        {
+            "id": "service-generate-config-form",
+            "name": "Service: Generate config form",
+            "description": null
+        },
+        {
+            "id": "service-use-config-controller-shortcut",
+            "name": "Service: Use config() controller shortcut",
+            "description": null
+        },
+        {
+            "id": "service-use-drupal-getcontainer",
+            "name": "Service: Use Drupal::getContainer()",
+            "description": null
+        }
+    ],
+    "sha": "96e04679cd945eeaa05527c13f5dd31dc106ba6d"
+}

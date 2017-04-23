@@ -1,0 +1,11 @@
+diff --git a/modules/custom/old_bay/old_bay.routing.yml b/modules/custom/old_bay/old_bay.routing.yml
+index 2809616..cb543b3 100644
+--- a/modules/custom/old_bay/old_bay.routing.yml
++++ b/modules/custom/old_bay/old_bay.routing.yml
+@@ -2,5 +2,6 @@ old_bay_season_food:
+   path: /season/oldbay/{count}
+   defaults:
+     _controller: Drupal\old_bay\Controller\OldBayController::seasonFood
++    count: 50
+   requirements:
+     _permission: 'access content'

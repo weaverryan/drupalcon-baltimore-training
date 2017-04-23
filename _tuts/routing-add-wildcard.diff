@@ -1,0 +1,28 @@
+diff --git a/modules/custom/old_bay/old_bay.routing.yml b/modules/custom/old_bay/old_bay.routing.yml
+index 6c81d03..2809616 100644
+--- a/modules/custom/old_bay/old_bay.routing.yml
++++ b/modules/custom/old_bay/old_bay.routing.yml
+@@ -1,5 +1,5 @@
+ old_bay_season_food:
+-  path: /season/oldbay
++  path: /season/oldbay/{count}
+   defaults:
+     _controller: Drupal\old_bay\Controller\OldBayController::seasonFood
+   requirements:
+diff --git a/modules/custom/old_bay/src/Controller/OldBayController.php b/modules/custom/old_bay/src/Controller/OldBayController.php
+index 9a6a1d4..56d2c22 100644
+--- a/modules/custom/old_bay/src/Controller/OldBayController.php
++++ b/modules/custom/old_bay/src/Controller/OldBayController.php
+@@ -5,7 +5,10 @@
+ use Symfony\Component\HttpFoundation\Response;
+ 
+ class OldBayController {
+-  public function seasonFood() {
+-    return new Response('Boom! Your popcorn got old bayified!');
++  public function seasonFood($count) {
++    return new Response(sprintf(
++      'Boom! We just bayified %s pieces of popcorn!',
++      $count
++    ));
+   }
+ }
