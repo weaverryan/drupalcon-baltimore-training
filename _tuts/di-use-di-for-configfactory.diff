@@ -1,5 +1,5 @@
 diff --git a/modules/custom/old_bay/src/Service/OldBaySeasoner.php b/modules/custom/old_bay/src/Service/OldBaySeasoner.php
-index a279dbb..07c692d 100644
+index dccee5e..388b3e6 100644
 --- a/modules/custom/old_bay/src/Service/OldBaySeasoner.php
 +++ b/modules/custom/old_bay/src/Service/OldBaySeasoner.php
 @@ -2,10 +2,19 @@

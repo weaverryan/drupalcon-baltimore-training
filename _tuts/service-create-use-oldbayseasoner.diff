@@ -25,7 +25,7 @@ index c1751e0..61c556d 100644
  
 diff --git a/modules/custom/old_bay/src/Service/OldBaySeasoner.php b/modules/custom/old_bay/src/Service/OldBaySeasoner.php
 new file mode 100644
-index 0000000..e8205b3
+index 0000000..8368509
 --- /dev/null
 +++ b/modules/custom/old_bay/src/Service/OldBaySeasoner.php
 @@ -0,0 +1,16 @@
@@ -37,7 +37,7 @@ index 0000000..e8205b3
 +  public function seasonSomeRandomFood($count) {
 +    $foods = ['popcorn', 'french fries', 'soup', 'chicken'];
 +    $seasonedFoods = [];
-+    for ($i = 0; $i <= $count; $i++) {
++    for ($i = 0; $i < $count; $i++) {
 +      $foodKey = array_rand($foods);
 +      $seasonedFoods[] = 'Bayified some '.$foods[$foodKey];
 +    }
