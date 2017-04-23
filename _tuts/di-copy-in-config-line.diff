@@ -1,16 +1,13 @@
 diff --git a/modules/custom/old_bay/src/Controller/OldBayController.php b/modules/custom/old_bay/src/Controller/OldBayController.php
-index e010e28..5a513c4 100644
+index 7535295..5a513c4 100644
 --- a/modules/custom/old_bay/src/Controller/OldBayController.php
 +++ b/modules/custom/old_bay/src/Controller/OldBayController.php
-@@ -7,14 +7,6 @@
+@@ -7,11 +7,6 @@
  
  class OldBayController extends ControllerBase {
    public function seasonFood($count) {
 -    if ($count === null) {
--      $configFactory = \Drupal::getContainer()
--        ->get('config.factory');
--
--      $count = $configFactory->get('old_bay.default')
+-      $count = $this->config('old_bay.default')
 -        ->get('default_count');
 -    }
 -
@@ -18,18 +15,15 @@ index e010e28..5a513c4 100644
        ->get('old_bay.seasoner');
      $foods = $seasoner->seasonSomeRandomFood($count);
 diff --git a/modules/custom/old_bay/src/Service/OldBaySeasoner.php b/modules/custom/old_bay/src/Service/OldBaySeasoner.php
-index e8205b3..511a733 100644
+index e8205b3..a279dbb 100644
 --- a/modules/custom/old_bay/src/Service/OldBaySeasoner.php
 +++ b/modules/custom/old_bay/src/Service/OldBaySeasoner.php
-@@ -4,6 +4,14 @@
+@@ -4,6 +4,11 @@
  
  class OldBaySeasoner {
    public function seasonSomeRandomFood($count) {
 +    if ($count === null) {
-+      $configFactory = \Drupal::getContainer()
-+        ->get('config.factory');
-+
-+      $count = $configFactory->get('old_bay.default')
++      $count = $this->config('old_bay.default')
 +        ->get('default_count');
 +    }
 +
