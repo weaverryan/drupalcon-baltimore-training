@@ -104,7 +104,17 @@
             "id": "event-change-route-path",
             "name": "Event: Change route path",
             "description": null
+        },
+        {
+            "id": "plugin-generate-block-plugin",
+            "name": "Plugin: Generate block plugin",
+            "description": null
+        },
+        {
+            "id": "plugin-use-seasoner-in-plugin",
+            "name": "Plugin: Use seasoner in plugin",
+            "description": null
         }
     ],
-    "sha": "03ff72674e919f297b7aba6f7ed73a2187bf4945"
+    "sha": "7f96894b02a3ca2a48bba091f479fef5f314ff14"
 }

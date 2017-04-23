@@ -1,0 +1,34 @@
+diff --git a/modules/custom/old_bay/src/Plugin/Block/FoodsBlock.php b/modules/custom/old_bay/src/Plugin/Block/FoodsBlock.php
+new file mode 100644
+index 0000000..ff27fdf
+--- /dev/null
++++ b/modules/custom/old_bay/src/Plugin/Block/FoodsBlock.php
+@@ -0,0 +1,28 @@
++<?php
++
++namespace Drupal\old_bay\Plugin\Block;
++
++use Drupal\Core\Block\BlockBase;
++
++/**
++ * Provides a 'FoodsBlock' block.
++ *
++ * @Block(
++ *  id = "foods_block",
++ *  admin_label = @Translation("Foods block"),
++ * )
++ */
++class FoodsBlock extends BlockBase {
++
++
++  /**
++   * {@inheritdoc}
++   */
++  public function build() {
++    $build = [];
++    $build['foods_block']['#markup'] = 'Implement FoodsBlock.';
++
++    return $build;
++  }
++
++}
