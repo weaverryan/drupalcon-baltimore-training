@@ -1,0 +1,24 @@
+diff --git a/modules/custom/old_bay/old_bay.services.yml b/modules/custom/old_bay/old_bay.services.yml
+new file mode 100644
+index 0000000..933c1c3
+--- /dev/null
++++ b/modules/custom/old_bay/old_bay.services.yml
+@@ -0,0 +1,4 @@
++services:
++  old_bay.seasoner:
++    class: Drupal\old_bay\Service\OldBaySeasoner
++    arguments: []
+diff --git a/modules/custom/old_bay/src/Controller/OldBayController.php b/modules/custom/old_bay/src/Controller/OldBayController.php
+index 2ea04ac..e010e28 100644
+--- a/modules/custom/old_bay/src/Controller/OldBayController.php
++++ b/modules/custom/old_bay/src/Controller/OldBayController.php
+@@ -15,7 +15,8 @@ public function seasonFood($count) {
+         ->get('default_count');
+     }
+ 
+-    $seasoner = new OldBaySeasoner();
++    $seasoner = \Drupal::getContainer()
++      ->get('old_bay.seasoner');
+     $foods = $seasoner->seasonSomeRandomFood($count);
+ 
+     $message = sprintf(

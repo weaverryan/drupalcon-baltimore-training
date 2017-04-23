@@ -49,7 +49,22 @@
             "id": "service-use-drupal-getcontainer",
             "name": "Service: Use Drupal::getContainer()",
             "description": null
+        },
+        {
+            "id": "service-create-use-oldbayseasoner",
+            "name": "Service: Create & use OldBaySeasoner",
+            "description": null
+        },
+        {
+            "id": "service-register-as-service",
+            "name": "Service: Register as service",
+            "description": null
+        },
+        {
+            "id": "di-copy-in-config-line",
+            "name": "DI: Copy in config() line",
+            "description": null
         }
     ],
-    "sha": "96e04679cd945eeaa05527c13f5dd31dc106ba6d"
+    "sha": "32699ec3124746111bb4a33973dd1a23f43f7d00"
 }
