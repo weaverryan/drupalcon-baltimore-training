@@ -1,0 +1,35 @@
+diff --git a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
+index ee7df43..65ba57d 100644
+--- a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
++++ b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
+@@ -3,15 +3,28 @@
+ namespace Drupal\old_bay\EventSubscriber;
+ 
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
++use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+ 
+ class OldBayInitializerSubscriber implements EventSubscriberInterface {
++  private $startTime;
++
+   public function onKernelRequest() {
++    $this->startTime = microtime(true);
+     drupal_set_message('Grab the old bay! We are cooking!');
+   }
+ 
++  public function onKernelResponse(FilterResponseEvent $event) {
++    $duration = microtime(true) - $this->startTime;
++
++    $event->getResponse()
++      ->headers
++      ->set('X-oldbay-cooking-time', $duration * 1000);
++  }
++
+   public static function getSubscribedEvents() {
+     return [
+-      'kernel.request' => 'onKernelRequest'
++      'kernel.request' => 'onKernelRequest',
++      'kernel.response' => 'onKernelResponse',
+     ];
+   }
+ }
+\ No newline at end of file

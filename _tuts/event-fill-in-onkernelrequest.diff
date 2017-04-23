@@ -1,0 +1,38 @@
+diff --git a/modules/custom/old_bay/old_bay.services.yml b/modules/custom/old_bay/old_bay.services.yml
+index ffdf531..0f96bac 100644
+--- a/modules/custom/old_bay/old_bay.services.yml
++++ b/modules/custom/old_bay/old_bay.services.yml
+@@ -2,4 +2,8 @@ services:
+   old_bay.seasoner:
+     class: Drupal\old_bay\Service\OldBaySeasoner
+     # arguments: ['@config.factory']
+-    autowire: true
+\ No newline at end of file
++    autowire: true
++
++  old_bay.initializer_subscriber:
++    class: Drupal\old_bay\EventSubscriber\OldBayInitializerSubscriber
++    arguments: []
+diff --git a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
+index 2fdd9c4..ee7df43 100644
+--- a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
++++ b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
+@@ -2,6 +2,16 @@
+ 
+ namespace Drupal\old_bay\EventSubscriber;
+ 
+-class OldBayInitializerSubscriber {
++use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+ 
++class OldBayInitializerSubscriber implements EventSubscriberInterface {
++  public function onKernelRequest() {
++    drupal_set_message('Grab the old bay! We are cooking!');
++  }
++
++  public static function getSubscribedEvents() {
++    return [
++      'kernel.request' => 'onKernelRequest'
++    ];
++  }
+ }
+\ No newline at end of file

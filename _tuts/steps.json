@@ -59,7 +59,52 @@
             "id": "di-copy-in-config-line",
             "name": "DI: Copy in config() line",
             "description": null
+        },
+        {
+            "id": "di-use-di-for-configfactory",
+            "name": "DI: Use DI for ConfigFactory",
+            "description": null
+        },
+        {
+            "id": "di-update-services-yml-arg",
+            "name": "DI: Update services.yml arg",
+            "description": null
+        },
+        {
+            "id": "di-add-autowire",
+            "name": "DI: Add autowire",
+            "description": null
+        },
+        {
+            "id": "event-create-empty-subscriber-class",
+            "name": "Event: Create empty subscriber class",
+            "description": null
+        },
+        {
+            "id": "event-fill-in-onkernelrequest",
+            "name": "Event: Fill in onKernelRequest",
+            "description": null
+        },
+        {
+            "id": "event-tag-the-service",
+            "name": "Event: Tag the service",
+            "description": null
+        },
+        {
+            "id": "event-ec-add-duration-as-header",
+            "name": "Event: EC add duration as header",
+            "description": null
+        },
+        {
+            "id": "event-generate-route-subscriber",
+            "name": "Event: Generate route subscriber",
+            "description": null
+        },
+        {
+            "id": "event-change-route-path",
+            "name": "Event: Change route path",
+            "description": null
         }
     ],
-    "sha": "2659d2fd2ef63dd0d0e0c2e6ab558fb58276d931"
+    "sha": "03ff72674e919f297b7aba6f7ed73a2187bf4945"
 }

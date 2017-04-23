@@ -1,0 +1,12 @@
+diff --git a/modules/custom/old_bay/old_bay.services.yml b/modules/custom/old_bay/old_bay.services.yml
+index e98be09..ffdf531 100644
+--- a/modules/custom/old_bay/old_bay.services.yml
++++ b/modules/custom/old_bay/old_bay.services.yml
+@@ -1,4 +1,5 @@
+ services:
+   old_bay.seasoner:
+     class: Drupal\old_bay\Service\OldBaySeasoner
+-    arguments: ['@config.factory']
++    # arguments: ['@config.factory']
++    autowire: true
+\ No newline at end of file

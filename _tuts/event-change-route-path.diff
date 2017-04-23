@@ -1,0 +1,13 @@
+diff --git a/modules/custom/old_bay/src/Routing/RouteSubscriber.php b/modules/custom/old_bay/src/Routing/RouteSubscriber.php
+index 6058cb7..4d86b24 100644
+--- a/modules/custom/old_bay/src/Routing/RouteSubscriber.php
++++ b/modules/custom/old_bay/src/Routing/RouteSubscriber.php
+@@ -16,5 +16,8 @@ class RouteSubscriber extends RouteSubscriberBase {
+    * {@inheritdoc}
+    */
+   protected function alterRoutes(RouteCollection $collection) {
++    // change the route path, just to show we're powerful!
++    $collection->get('old_bay_season_food')
++      ->setPath('/season/oldbay/changed/{count}');
+   }
+ }
