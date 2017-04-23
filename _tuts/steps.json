@@ -46,11 +46,6 @@
             "description": null
         },
         {
-            "id": "service-use-drupal-getcontainer",
-            "name": "Service: Use Drupal::getContainer()",
-            "description": null
-        },
-        {
             "id": "service-create-use-oldbayseasoner",
             "name": "Service: Create & use OldBaySeasoner",
             "description": null
