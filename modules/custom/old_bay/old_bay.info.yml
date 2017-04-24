@@ -1,0 +1,5 @@
+name: old_bay
+type: module
+description: Old Bay Seasoning woohoo!
+core: 8.x
+package: Custom

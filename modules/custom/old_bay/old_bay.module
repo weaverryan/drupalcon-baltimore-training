@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains old_bay.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function old_bay_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the old_bay module.
+    case 'help.page.old_bay':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Old Bay Seasoning woohoo!') . '</p>';
+      return $output;
+
+    default:
+  }
+}
