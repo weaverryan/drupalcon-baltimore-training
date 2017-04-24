@@ -3,3 +3,7 @@ services:
     class: Drupal\old_bay\Service\OldBaySeasoner
     # arguments: ['@config.factory']
     autowire: true
+
+  old_bay.event_subscriber:
+    class: Drupal\old_bay\EventSubscriber\OldBayEventSubscriber
+    arguments: []
