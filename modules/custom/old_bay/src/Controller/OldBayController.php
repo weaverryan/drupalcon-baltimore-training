@@ -7,11 +7,6 @@ use Drupal\old_bay\Service\OldBaySeasoner;
 
 class OldBayController extends ControllerBase {
   public function seasonFood($count) {
-    if ($count === null) {
-      $count = $this->config('old_bay.default')
-        ->get('default_count');
-    }
-
     $seasoner = \Drupal::getContainer()
       ->get('old_bay.seasoner');
     $foods = $seasoner->seasonSomeRandomFood($count);
