@@ -1,0 +1,4 @@
+services:
+  old_bay.seasoner:
+    class: Drupal\old_bay\Service\OldBaySeasoner
+    arguments: []

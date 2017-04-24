@@ -12,7 +12,8 @@ class OldBayController extends ControllerBase {
         ->get('default_count');
     }
 
-    $seasoner = new OldBaySeasoner();
+    $seasoner = \Drupal::getContainer()
+      ->get('old_bay.seasoner');
     $foods = $seasoner->seasonSomeRandomFood($count);
 
     $message = sprintf(
