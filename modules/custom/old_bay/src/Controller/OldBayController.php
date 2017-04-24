@@ -3,6 +3,7 @@
 namespace Drupal\old_bay\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\old_bay\Service\OldBaySeasoner;
 
 class OldBayController extends ControllerBase {
   public function seasonFood($count) {
@@ -11,8 +12,11 @@ class OldBayController extends ControllerBase {
         ->get('default_count');
     }
 
+    $seasoner = new OldBaySeasoner();
+    $foods = $seasoner->seasonSomeRandomFood($count);
+
     $message = sprintf(
-      'Boom! We just bayified %s pieces of popcorn!',
+      'Boom! Dinner is served: <br/>'.implode("<br/>", $foods),
       $count
     );
 
