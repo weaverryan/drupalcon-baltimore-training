@@ -7,3 +7,5 @@ services:
   old_bay.event_subscriber:
     class: Drupal\old_bay\EventSubscriber\OldBayEventSubscriber
     arguments: []
+    tags:
+      - { name: event_subscriber }
