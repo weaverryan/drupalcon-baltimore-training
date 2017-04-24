@@ -2,5 +2,6 @@ old_bay_season_food:
   path: /season/oldbay/{count}
   defaults:
     _controller: Drupal\old_bay\Controller\OldBayController::seasonFood
+    count: 50
   requirements:
     _permission: 'access content'
