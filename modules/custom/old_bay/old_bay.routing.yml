@@ -5,3 +5,14 @@ old_bay_season_food:
     count: 50
   requirements:
     _permission: 'access content'
+
+old_bay.default_form:
+  path: '/admin/config/old_bay/default'
+  defaults:
+    _form: '\Drupal\old_bay\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

@@ -1,0 +1,7 @@
+old_bay.default_form:
+  title: 'Old Bay Settings'
+  route_name: old_bay.default_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+
