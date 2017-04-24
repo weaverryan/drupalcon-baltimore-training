@@ -5,7 +5,10 @@ namespace Drupal\old_bay\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 class OldBayController {
-  public function seasonFood() {
-    return new Response('Boom! Your popcorn got old bayified!');
+  public function seasonFood($count) {
+    return new Response(sprintf(
+      'Boom! We just bayified %s pieces of popcorn!',
+      $count
+    ));
   }
 }
