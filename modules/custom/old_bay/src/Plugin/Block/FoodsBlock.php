@@ -20,7 +20,10 @@ class FoodsBlock extends BlockBase {
    */
   public function build() {
     $build = [];
-    $build['foods_block']['#markup'] = 'Implement FoodsBlock.';
+    $foods = \Drupal::getContainer()
+      ->get('old_bay.seasoner')
+      ->seasonSomeRandomFood(5);
+    $build['foods_block']['#markup'] = implode('<br/>', $foods);
 
     return $build;
   }
