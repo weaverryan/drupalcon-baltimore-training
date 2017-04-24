@@ -1,4 +1,6 @@
 old_bay_season_food:
-  path: /season/oldbay/popcorn
+  path: /season/oldbay
+  defaults:
+    _controller: Drupal\old_bay\Controller\OldBayController::seasonFood
   requirements:
     _permission: 'access content'
