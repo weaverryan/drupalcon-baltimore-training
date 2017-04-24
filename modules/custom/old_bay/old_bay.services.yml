@@ -9,3 +9,8 @@ services:
     arguments: []
     tags:
       - { name: event_subscriber }
+  old_bay.route_subscriber:
+    class: Drupal\old_bay\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
