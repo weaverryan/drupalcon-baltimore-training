@@ -1,5 +1,5 @@
 diff --git a/modules/custom/old_bay/old_bay.services.yml b/modules/custom/old_bay/old_bay.services.yml
-index ffdf531..0f96bac 100644
+index ffdf531..1023c7b 100644
 --- a/modules/custom/old_bay/old_bay.services.yml
 +++ b/modules/custom/old_bay/old_bay.services.yml
 @@ -2,4 +2,8 @@ services:
@@ -10,21 +10,23 @@ index ffdf531..0f96bac 100644
 \ No newline at end of file
 +    autowire: true
 +
-+  old_bay.initializer_subscriber:
-+    class: Drupal\old_bay\EventSubscriber\OldBayInitializerSubscriber
++  old_bay.event_subscriber:
++    class: Drupal\old_bay\EventSubscriber\OldBayEventSubscriber
 +    arguments: []
-diff --git a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
-index 2fdd9c4..ee7df43 100644
---- a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
-+++ b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
+diff --git a/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php b/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php
+index 4e30c6f..0649eae 100644
+--- a/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php
++++ b/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php
 @@ -2,6 +2,16 @@
  
  namespace Drupal\old_bay\EventSubscriber;
  
--class OldBayInitializerSubscriber {
+-class OldBayEventSubscriber {
 +use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  
-+class OldBayInitializerSubscriber implements EventSubscriberInterface {
+-}
+\ No newline at end of file
++class OldBayEventSubscriber implements EventSubscriberInterface {
 +  public function onKernelRequest() {
 +    drupal_set_message('Grab the old bay! We are cooking!');
 +  }
@@ -34,5 +36,4 @@ index 2fdd9c4..ee7df43 100644
 +      'kernel.request' => 'onKernelRequest'
 +    ];
 +  }
- }
-\ No newline at end of file
++}

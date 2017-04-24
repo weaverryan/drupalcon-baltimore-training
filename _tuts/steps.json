@@ -76,6 +76,11 @@
             "description": null
         },
         {
+            "id": "profiler-add-profiler",
+            "name": "Profiler: Add profiler",
+            "description": null
+        },
+        {
             "id": "event-create-empty-subscriber-class",
             "name": "Event: Create empty subscriber class",
             "description": null
@@ -116,5 +121,5 @@
             "description": null
         }
     ],
-    "sha": "98c5bf02387927710f7426e7c9e069a5e82264c0"
+    "sha": "5abc0a64d2aceac2138220e9a75c83fde53f437e"
 }

@@ -9,7 +9,7 @@ index 0000000..933c1c3
 +    class: Drupal\old_bay\Service\OldBaySeasoner
 +    arguments: []
 diff --git a/modules/custom/old_bay/src/Controller/OldBayController.php b/modules/custom/old_bay/src/Controller/OldBayController.php
-index 61c556d..7535295 100644
+index bc601bb..8ac8307 100644
 --- a/modules/custom/old_bay/src/Controller/OldBayController.php
 +++ b/modules/custom/old_bay/src/Controller/OldBayController.php
 @@ -12,7 +12,8 @@ public function seasonFood($count) {

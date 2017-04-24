@@ -1,5 +1,5 @@
 diff --git a/modules/custom/old_bay/src/Controller/OldBayController.php b/modules/custom/old_bay/src/Controller/OldBayController.php
-index 7535295..5a513c4 100644
+index 8ac8307..a17a43b 100644
 --- a/modules/custom/old_bay/src/Controller/OldBayController.php
 +++ b/modules/custom/old_bay/src/Controller/OldBayController.php
 @@ -7,11 +7,6 @@

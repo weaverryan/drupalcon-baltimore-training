@@ -1,14 +1,14 @@
-diff --git a/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
+diff --git a/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php b/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php
 new file mode 100644
-index 0000000..2fdd9c4
+index 0000000..4e30c6f
 --- /dev/null
-+++ b/modules/custom/old_bay/src/EventSubscriber/OldBayInitializerSubscriber.php
++++ b/modules/custom/old_bay/src/EventSubscriber/OldBayEventSubscriber.php
 @@ -0,0 +1,7 @@
 +<?php
 +
 +namespace Drupal\old_bay\EventSubscriber;
 +
-+class OldBayInitializerSubscriber {
++class OldBayEventSubscriber {
 +
 +}
 \ No newline at end of file

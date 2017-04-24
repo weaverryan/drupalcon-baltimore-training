@@ -1,5 +1,5 @@
 diff --git a/modules/custom/old_bay/old_bay.services.yml b/modules/custom/old_bay/old_bay.services.yml
-index 7d514e6..ad5f836 100644
+index 76ce920..4817d3e 100644
 --- a/modules/custom/old_bay/old_bay.services.yml
 +++ b/modules/custom/old_bay/old_bay.services.yml
 @@ -9,3 +9,8 @@ services:
